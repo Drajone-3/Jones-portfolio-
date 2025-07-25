@@ -9,6 +9,7 @@ body {
   background-color: #f7f7f7;
   color: #333;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -19,22 +20,38 @@ body {
 
 section {
   margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .intro {
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .intro h1 {
   font-size: 2.5rem;
   color: #222;
+  margin-bottom: 10px;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  color: #666;
+.typing {
+  font-size: 1.1rem;
+  color: #0077cc;
+  height: 1.2em;
+  display: inline-block;
+  border-right: 2px solid #0077cc;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 h2 {
